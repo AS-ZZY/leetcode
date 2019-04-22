@@ -7,19 +7,24 @@ def num_(path):
         for root, dirs, files in os.walk(path):
             for _ in files:
                 count += 1
-        print(path.split("\\")[-1] + "\t" + str(count))
+        a = 13 - len(path.split("\\")[-1])
+        print(path.split("\\")[-1] + " " * a + str(count))
         return count
     else:
         return 0
 
 
+def clear():
+    os.system('cls')
+
+
 def num__(path):
     sum_ = 0
-    for i in range(10):
+    for i in range(11):
         path_ = str(i) + "01-" + str(i + 1) + "00"
         path_all = path + path_
         sum_ +=  num_(path_all)
-    print("sum\t" + str(sum_))
+    print("sum" + " " * 10 + str(sum_))
 
 
 def _input():
@@ -29,7 +34,9 @@ def _input():
             a = int(a)
             break
         except Exception:
-            pass
+            clear()
+            a = 'c'
+            break
     return a
 
 
@@ -37,12 +44,14 @@ def find_dir(x, path):
     i = 0
     while 100 * i + 1 > x or x > 100 * (i + 1):
         i += 1
+        if i == 15:
+            return False, ""
     if i == 0:
         st = "001"
     else:
         st = str(100 * i + 1)
     path_ = path + st + "-" + str(100 * (i + 1))
-    return path_
+    return True, path_
 
 
 def find_fil(x, path):
@@ -58,10 +67,16 @@ def find_fil(x, path):
 
 def main():
     num = _input()
-    path = find_dir(num, ".\\")
-    t, l = find_fil(num, path)
-    if t:
-        print(str(t) + '\t' + l)
+    while num == 'c':
+        num__(".\\")
+        num = _input()
+    tt, path = find_dir(num, ".\\")
+    if tt == True:
+        t, l = find_fil(num, path)
+        if t:
+            print(str(t) + '\t' + l)
+        else:
+            print(False)
     else:
         print(False)
 
