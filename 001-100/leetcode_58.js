@@ -13,7 +13,7 @@ var lengthOfLastWord = function(s) {
 	return len;
 };
 function is_letter(a){
-	if((a > 'a' && a < 'z')||(a > 'A' && a < 'Z'))
+	if((a >= 'a' && a <= 'z')||(a >= 'A' && a <= 'Z'))
 		return true;
 	else
 		return false;
