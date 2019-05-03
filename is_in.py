@@ -71,7 +71,7 @@ def main():
         num__(".\\")
         num = _input()
     tt, path = find_dir(num, ".\\")
-    if tt == True:
+    if tt:
         t, l = find_fil(num, path)
         if t:
             print(str(t) + '\t' + l)
