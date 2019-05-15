@@ -5,8 +5,7 @@ def num_(path):
     if os.path.exists(path):
         count = 0
         for root, dirs, files in os.walk(path):
-            for _ in files:
-                count += 1
+            count += len(files)
         a = 13 - len(path.split("\\")[-1])
         print(path.split("\\")[-1] + " " * a + str(count))
         return count
