@@ -3,6 +3,7 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
+
 class Solution:
     def preorderTraversal(self, root: TreeNode):
         list_1 = []
