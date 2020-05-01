@@ -3,7 +3,7 @@ var numMovesStones = function(a, b, c) {
         a = [b, b = a][0]
     }
     if(c < b) {
-        c = [b, c = b][0];
+        c = [b, b = c][0];
     }
     if(b < a) {
         a = [b, b = a][0]
