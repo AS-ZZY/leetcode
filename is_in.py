@@ -8,7 +8,7 @@ def num(path):
         for root, dirs, files in os.walk(path + path2):
             l = len(files)
         count += l
-        print(path2 + "\t" + str(l))
+        print(path2 + " " * (12 - len(path2)) + str(l))
     print("sum\t" + str(count))
 
 
