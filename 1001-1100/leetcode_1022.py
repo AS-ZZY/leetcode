@@ -6,8 +6,6 @@ class TreeNode:
 
 class Solution:
     def sumRootToLeaf(self, root: TreeNode) -> int:
-        if root is None:
-            return 0
         self.sum = 0
         self.getVal(root, 0)
         return self.sum % (10 ** 9 + 7)
