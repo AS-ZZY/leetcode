@@ -27,4 +27,4 @@ class Solution:
         if root.val == head.val:
             if start(root, head):
                 return True
-        return self.isSubPath( head, root.left) or self.isSubPath(head, root.right)
+        return self.isSubPath(head, root.left) or self.isSubPath(head, root.right)
