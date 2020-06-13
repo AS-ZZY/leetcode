@@ -15,16 +15,15 @@ int main()
 }
 
 int climbStairs(int n) {
-    int l1 = 0,l2 = 1,a;
-    int i = 1;
-    while(i <= n)
-    {
-        a = l2;
-        l2 = l1 + l2;
-        l1 = a;
-        i++;
+    if (n == 0 || n == 1) {
+        return 1;
     }
-    return l1;
+    int a = 1, b = 1;
+    for (int i = 2; i <= n; i++) {
+        b = a + b;
+        a = b - a;
+    }
+    return b;
 }
 
 
