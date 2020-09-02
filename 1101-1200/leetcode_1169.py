@@ -1,5 +1,5 @@
 class Solution:
-    def invalidTransactions(self, transactions: List[str]) -> List[str]:
+    def invalidTransactions(self, transactions):
         for i in range(len(transactions)):
             transactions[i] = transactions[i].split(",")
         transactions.sort(key = lambda x:int(x[1]))
