@@ -4,10 +4,12 @@ class TreeNode(object):
         self.left = None
         self.right = None
 
+
 class TreeNodetime(object):
     def __init__(self, x):
         self.node = x
         self.time = 1
+
 
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
@@ -36,6 +38,3 @@ class Solution(object):
         for i in range(len(l2)):
             if l1[i].node.val != l2[i].node.val:
                 return l1[i - 1].node.val
-        
-
-        
