@@ -1,6 +1,6 @@
 class Solution:
     def largestNumber(self, nums):
-        nums = [ str(i) for i in nums ]
+        nums = [str(i) for i in nums]
         change = True
         while change:
             change = False
@@ -12,7 +12,7 @@ class Solution:
                         break
                     elif int(a[j]) < int(b[j]):
                         nums[i], nums[i + 1] = nums[i + 1], nums[i]
-                        change = True                      
+                        change = True
                         break
         a = "".join(nums)
         i = 0
