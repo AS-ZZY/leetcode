@@ -1,8 +1,7 @@
 class Solution:
     def thousandSeparator(self, n: int):
         s = str(n)
-        i = len(s) - 1
-        num = 0
+        i, num = len(s) - 1, 0
         while i > 0:
             num += 1
             if num == 3:
